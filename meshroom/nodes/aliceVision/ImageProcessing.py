@@ -30,7 +30,7 @@ class ImageProcessing(desc.CommandLineNode):
             description='Use images from specific folder(s).',
         ),
         desc.ListAttribute(
-            elementDesc=desc.File(
+            elementDesc=desc.StringParam(
                 name="metadataFolder",
                 label="Metadata Folder",
                 description="",
@@ -40,6 +40,7 @@ class ImageProcessing(desc.CommandLineNode):
             name="metadataFolders",
             label="Metadata input Folders",
             description='Use images metadata from specific folder(s).',
+            advanced=True,
         ),
         desc.ChoiceParam(
             name='extension',
